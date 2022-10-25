@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      POST Y GET
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">POST Y GET</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="principal-container">
+    <form [formGroup]="form" (submit)="enviarData()" class="grid-form">
+      <label class="texto"> Nombre: </label> <textarea formControlName="Nombre" class="text-comment">    </textarea>
+      <label class="texto"> Nombre de archivo: </label><textarea formControlName="NombreArchivo" class="text-comment">    </textarea>
+      <label class="texto"> Ruta: </label><textarea formControlName="Ruta" class="text-comment">    </textarea>
+      <label class="texto"> Archivo: </label><input formControlName="Archivo" change="capturarFile($event)"  type="file" >  
+      <button class="button"> Registro </button>
+    </form>
+  </div>
+  <button (click)="Consultar()" class="button"> Consulta </button>
+  
+
+</ion-content>
